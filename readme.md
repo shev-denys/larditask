@@ -1,38 +1,13 @@
 ## Using MySQL in Spring Boot via Spring Data JPA and Hibernate
 
-See here for more informations:
-http://blog.netgloo.com/2014/10/27/using-mysql-in-spring-boot-via-spring-data-jpa-and-hibernate/
+/create?login=[login]&fio=[fio]&password=[password]
 
-### Usage
+http://localhost:8080/addresses/get_by_lastname?middleName=ame
+http://localhost:8080/addresses
+http://localhost:8080/users
+http://localhost:8080/create?login=somelogin2&fio=myfoi2&password=login2
 
-- Run the application and go on http://localhost:8080/
-- Use the following urls to invoke controllers methods and see the interactions
-  with the database:
-  String login, String fio,String password
-    * `/create?login=[login]&fio=[fio]&password=[password]`: create a new user with an 
-      auto-generated id and email and name as passed values.
-    * `/delete?id=[id]`: delete the user with the passed id.
-    * `/get-by-email?email=[email]`: retrieve the id for the user with the 
-      passed email address.
-    * `/update?id=[id]&email=[email]&name=[name]`: update the email and the 
-      name for the user indentified by the passed id.
-
-### Build and run
-
-#### Configurations
-
-Open the `application.properties` file and set your own configurations.
-
-#### Prerequisites
-
-- Java 7
-- Maven 3
-
-#### From terminal
-
-Go on the project's root folder, then type:
-
-    $ mvn spring-boot:run
+    $ mvn spring-boot:run -Dlardi.conf=./addressbook.properties
 
 #### From Eclipse (Spring Tool Suite)
 
